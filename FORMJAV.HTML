@@ -1,0 +1,280 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml ">
+
+<style>
+*{
+	
+	margin:0;
+	padding:0;
+}
+.top{
+	background-color:#009;
+	height:100px;
+	width:100%;
+}
+P{
+	color:#000;
+	font-family:"Comic Sans MS", cursive;
+	font-size:25PX;
+	
+	float:left;
+	
+	
+	
+}
+k{
+
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size:24px;
+	color:#FFF;
+	margin-left:450px;
+	
+	
+}
+
+.bottom
+{
+	background: #9FF;
+height:300px;
+width:100%;
+
+
+}
+uu{ color:#F63;
+font-size:14px;
+}
+#passs {
+	background: #999;
+	height:20px;
+	width:172px;
+	margin-left:523px;
+	margin-top:12px;
+	
+}
+.passl{
+	
+
+	height:21px;
+	width:141px;
+	float:left;
+}
+.passr{
+	
+height:21px;
+width:31px;
+float:left;
+}
+#p{ width:137px;
+margin-left:1px;
+
+}
+p9{
+	margin-left:1125px;
+	margin-top:320px;
+	font-size:14px;
+	color:#FFF;
+}
+</style>
+<script src="angular-1.5.5/angular.min.js" type="text/javascript"></script>
+<script>
+var pas=1;
+while(pas==1)
+{
+var pass = prompt("Please Enter password");
+if (pass == "abc")
+{
+	pas=0;
+}
+else
+{
+	
+}
+} 
+var point =0;
+
+function mm()
+{
+	document.getElementById("p").type="password";
+}
+function krk()
+{
+	document.getElementById("p").type="text";
+}
+
+function kk()
+{ 
+
+
+if(	document.getElementById("u").value.length <1)
+
+{
+
+point =1;
+
+}
+if(	document.getElementById("p").value.length <5)
+{
+
+point =1;
+document.getElementById("passs").style.backgroundColor='red';
+}
+if(	document.getElementById("c").value.length <10)
+{
+
+point=1;
+}
+if (point==0)
+return true;
+if (point==1)
+{
+	
+
+return false;
+}
+}
+function ii()
+{
+if(	document.getElementById("c").value.length <10)
+alert("Mobile no must be off 10 digits");
+document.getElementById("music").src ="28.mp3";
+
+
+}
+
+function ppp()
+{
+
+var aaa= document.getElementById("p").value;
+var bbb = RegExp("^(?=.*[@])(?=.*[a-z])(?=.*[0-9])(?=.*[A-Z])(?=.{8,})");
+if(aaa.match(bbb))
+document.getElementById("show").innerHTML = "Password is ok";
+else
+document.getElementById("show").innerHTML = "Password is not ok";
+
+}
+function eml()
+{
+	var eee = document.getElementById("e").value;
+var mll = RegExp("^(?=.*[@])(?=.*[.])(?=.*[c|C])(?=.*[o|O])(?=.{6,})(?=.*[m|M])");
+if(eee.match(mll))
+document.getElementById("show1").innerHTML = "Email id is valid";
+else
+document.getElementById("show1").innerHTML = "Email id is not valid";
+
+}
+function kkkkk(event)
+{
+	var x= event.x;
+	var y = event.y;
+	var z = " Cordinate is ("+x+" ,"+y+") ";
+	document.getElementById("printer").innerHTML=z;
+}
+function klkl()
+{
+	document.getElementById("printer").innerHTML="";
+}
+
+</script>
+
+<body ng-app="" onmousemove="kkkkk(event)" onmouseout="klkl()">
+<form  action="shivam.html" onclick="return kk()">
+<div class="top">
+<br />
+<k>APPLICATION FORM</k><br />
+<p9 id="printer"></p9>
+</div> 
+<div  class="bottom">
+
+<br />
+<table >
+
+<tr>
+<td>
+
+<P  style=" margin-left:300px">Username   <input type="text " id="u" style="margin-left:100px"/></P>
+
+</tr>
+</td>
+
+<tr>
+<td>
+
+<P  style="margin-left:300px">Password</p>
+<div id="passs">
+<div class="passl">
+  <input type="password" id="p"  onkeyup="ppp()"  />
+</div>
+  
+<div class="passr"> 
+      <image src =' c.jpg' style="cursor:pointer; height:17px; margin-top:1px;" onmouseup="mm()" onmousedown="krk()"  />  
+</div>
+<uu id="show"/> 
+
+</div>
+</tr>
+</td>
+
+<tr>
+<td>
+
+<P style="margin-left:300px">EmaiL ID  <input type="text "  id="e" onkeyup="eml()"style="margin-left:108px"/><uu id="show1"/> </P>
+</tr>
+</td>
+<tr>
+<td>
+
+<P  style="margin-left:300px">Contact no   <input type="text" id="c" style="margin-left:90px" onmousedown="ii()" onmousedown="ii()" onkeypress="if( event.keyCode > 57||event.keyCode <48){event.returnValue=false;}" maxlength="10"/> </P>
+
+
+
+</tr>
+</td>
+<tr>
+<td>
+<p style="margin-left:300px" > Select Gender<input type="radio" ng-model="myval" value="male"  /> Male
+<input type="radio" ng-model="myval" value="female"  /> Female </p>
+<div ng-switch="myval">
+<div ng-switch-when="male">
+<h2>IACT</h2>
+<P> here you vcan learn </P>
+</div>
+<div ng-switch-when="female">
+<h2> INDIA</h2>
+<P>  ITS GREAT </P>
+</div>
+</div>
+
+
+</tr>
+</td>
+
+</table>
+</div>
+<br>
+<p style="margin-left:300px" > Select Gender<input type="radio" ng-model="myval" value="male"  /> Male
+<input type="radio" ng-model="myval" value="female"  /> Female </p>
+<div ng-switch="myval">
+<div ng-switch-when="male">
+<h2>IACT</h2>
+<P> here you vcan learn </P>
+</div>
+<div ng-switch-when="female">
+<h2> INDIA</h2>
+<P>  ITS GREAT </P>
+</div>
+</div>
+<br>
+<br>
+<input type="submit" value="Registration"  style="margin-left:500px"/>
+<audio  autoplay="autoplay" id="music">
+<source src="2.mp3"  type="audio/mp3" />
+</audio>
+
+</form>
+
+
+
+
+
+</body>
+</html>
