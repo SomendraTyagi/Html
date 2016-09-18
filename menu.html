@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+<script type="text/javascript" src="jquery-3.0.0.min.js">
+</script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$("li").hover(function(){
+		$(this).find("ul>li").stop().slideToggle(700);
+	});
+    
+});
+
+<style>
+ul
+{margin:0;
+list-style:none;
+padding:0px;
+}
+ul li
+{
+	float: left;
+	width:200px;
+	height:50px;
+	line-height:50px;
+	text-align:center;
+	background-color:#F33;
+	border-radius:10px;
+}
+ul li a
+{font-family:"Courier New", Courier, monospace;
+font-size:30px;
+color:#F69;
+text-decoration:none;
+font-weight:bold;
+}
+ul li ul li a{
+	font-size:18px;
+}
+ul li ul li 
+{
+	background-color:#C00;
+	display:none;
+	
+}
+ul li ul li :hover
+{
+	background-color:#03C;
+}
+	ul li:hover
+{
+	background-color:#F00;
+	}
+</style>
+<body>
+<ul>
+   <li><a href="">Home</a>
+   <ul>
+      <li><a href="">Item 1</a></li>
+      <li><a href="">Item 2</a></li>
+      </ul>
+    <li><a href="">Login</a></li>
+    <li><a href="">About US</a> </li> 
+    </ul>
+      
+</body>
+</html>
